@@ -1,0 +1,8 @@
+syntax="proto3";
+
+package sentiger.news.author.v1;
+
+message Author {
+  uint64 id = 1;
+  string username = 2;
+}

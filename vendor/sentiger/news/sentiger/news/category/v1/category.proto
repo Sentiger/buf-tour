@@ -1,0 +1,8 @@
+syntax="proto3";
+
+package sentiger.news.category.v1;
+
+message Category {
+  uint64 id = 1;
+  string title = 2;
+}

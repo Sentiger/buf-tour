@@ -1,0 +1,12 @@
+version: v1
+name: buf.build/sentiger/test # 可以推送远程buf仓库
+deps:
+  - buf.build/googleapis/googleapis  # 安装依赖，默认在~/.cache/buf/v1/module/data/buf.build 目录下
+  - buf.build/sentiger/news
+breaking:
+  use:
+    - FILE
+lint: # 检测格式
+  use: # 使用规则
+    - DEFAULT
+  ignore: # 忽略哪些文件检测可以直接被忽略。 buf lint proto --error-format=config-ignore-yaml 可以使用这个命令将错误的忽略格式打印出来

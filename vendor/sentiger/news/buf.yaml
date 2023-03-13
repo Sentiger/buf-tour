@@ -1,0 +1,12 @@
+version: v1
+name: buf.build/sentiger/news
+breaking:
+  use:
+    - FILE
+lint:
+  use:
+    - DEFAULT
+#  ignore_only:
+#    PACKAGE_DIRECTORY_MATCH:  # 忽略目录不一致，这里加了项目前缀，这里参数可以通过 buf lint --error-format=config-ignore-yaml    获取
+#      - author/v1/author.proto
+#      - category/v1/category.proto

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package book.v1;
+
+import "google/protobuf/timestamp.proto";
+import "sentiger/news/category/v1/category.proto";
+
+option go_package = "github.com/sentiger/buf/gen/book/v1;bookv1";
+
+message Book {
+  uint64 id = 1;
+  string title = 2;
+  google.protobuf.Timestamp time = 3; // 这里包名就是google.protobuf
+
+  sentiger.news.category.v1.Category category = 4; // 引入自定义的
+}
